@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+    {% block style %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <h1>Cinema.com</h1>
+            </div>
+            <ul class="links">
+                <li class="link-item">
+                    <a href="#">About us</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">Most recent</a>
+                </li>
+                <li class="link-item">
+                    <a href="#">Most popular</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        {% block main %}{% endblock %}
+    </section>
+    <footer></footer>
+</body>
+</html>
